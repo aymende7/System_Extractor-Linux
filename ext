@@ -201,6 +201,7 @@ E_DAT() {
                     then
                     echo
 	                echo  "   DONE! Mounted system.img in output folder"
+			sudo chown -R "$USER":"$USER" output
 	                echo
 					cd ..
 	                read -p "   ALL DONE HIT ENTER TO CONTINUE TO MENU"
@@ -518,6 +519,7 @@ E_SYS() {
                   if [ $? == 0 ]
                        then
                        echo
+		     sudo chown -R "$USER":"$USER" output
                      echo  "   DONE! Mounted system.raw.img in output folder"
                      echo
              cd ..
