@@ -257,6 +257,7 @@ UN_MNT() {
      echo
      #ROOT IS REQUIRED
 	 sudo umount output/
+	 sudo rm -rf output
      echo
      echo  "    DONE    "
      echo
@@ -423,7 +424,7 @@ EXT_START() {
   clear
   echo
   echo
-  cecho W "" "                        Marshmallow/Lollipop             "
+  cecho W "" "                    Nougat/Marshmallow/Lollipop          "
   cecho W "" "                     System extractor & repack           "
   cecho G "                           (" "by matrix" ")"
   cecho C "" "                                                     $DATE_STR"
@@ -519,7 +520,7 @@ E_SYS() {
                   if [ $? == 0 ]
                        then
                        echo
-		     sudo chown -R "$USER":"$USER" output
+                     sudo chown -R "$USER":"$USER" output
                      echo  "   DONE! Mounted system.raw.img in output folder"
                      echo
              cd ..
